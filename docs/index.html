@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>阅之国“哇牛叉”学院日常</title>
+	<link rel="stylesheet" href="http://qidian.gtimg.com/lulu/theme/modern/css/common/ui.css">
+	<link rel="stylesheet" href="http://qidian.gtimg.com/lulu/theme/modern/css/common/common.css">
+	<style>
+	body{min-width: inherit;}
+	.icon-loading{position: absolute;width:20px; height: 20px; background: url(http://qidian.gtimg.com/lulu/theme/modern/css/common/ui/images/Pagination/icon-loading.gif) no-repeat center;
+		visibility: hidden; margin-left: 10px;}
+	.loading .icon-loading{visibility: visible;}
+	article { font-size: 16px; margin: 30px; }
+	article h1 { margin: 20px 0; font-size: 28px; }
+	article h2 { margin: 30px 0 20px; font-size: 24px; }
+	article h3 { margin: 30px 0 20px; font-size: 22px; }
+	article h4 { margin: 1.5em 0 1em; font-size: 20px; }
+	article h5 { margin: 1.5em 0 1em; font-weight: bold; }
+	article code { border: 1px solid #EAEAEA; background-color: #fff; border-radius: 3px; padding: 0 4px; margin-left: 2px; margin-right: 2px; font-family: Consolas, monospace; }
+	article pre { padding: 10px 1em; margin: 1em 0; border: 1px dashed #ccc; background-color: #fff; font-family: Consolas, monospace; white-space: pre-wrap; word-wrap: break-word;}
+	article p { margin: 1em 0; }
+	article > ol { padding-left: 22px; list-style-type: decimal; }
+	article > ul { padding-left: 22px; list-style-type: disc; }
+	article > ul li, article > ol li { margin: .5em 0; }
+
+	blockquote {
+		background-color:  #fff;
+		padding: 1em;
+		margin-left:  0;
+	}
+	blockquote p { margin: .5em 0; }
+	.backtop { position: fixed; right: 10px; bottom: 10px; background-color: rgba(0,0,0,.5); color:#fff; width: 40px; height: 40px; border-radius: 50%; text-align: center; border: 10px solid transparent; display: none; transition: background-color .15s }
+	.backtop:hover{background-color: rgba(0,0,0,.65);color:#fff;}
+	</style>
+</head>
+<body>
+
+<header>
+	<a href="./" class="header_l"><h1 class="logo">阅文集团</h1></a>
+</header>
+<div class="main">
+	<!-- 侧边栏 -->
+    <!-- 侧边栏 -->
+    <aside id="aside"></aside>    
+    <!-- 主内容 -->
+    <section>
+    	<article id="article">
+    		<div class="ui-loading" style="height:400px;"><span class="ui-loading-icon"></span></div>
+    	</article>
+	</section>
+</div>
+<!-- 返回顶部 -->
+<a href="#" id="backtop" class="backtop">返回顶部</a>
+
+<script id="tplMenu" type="text/html">
+	<i class="aside_bg"></i>        
+    <div class="aside_main">
+        <dl class="aside_dl">
+            <dt class="aside_dt">春花秋月流水志</dt>
+            {{each daily as obj}}
+            <dd><a href="{{obj.url}}" class="aside_nav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
+        	{{/each}}
+        </dl>
+        <div class="aside_divide"></div>
+        <dl class="aside_dl">
+        	<dt class="aside_dt">夏裘冬葛小故事</dt>
+        	{{each article as obj}}
+            <dd><a href="{{obj.url}}" class="aside_nav"><i class="icon icon_nav_menu"></i>{{obj.menu}}</a><i class="icon-loading"></i></dd>
+        	{{/each}}
+        </dl>
+    </div>
+</script>
+<script src="http://qidian.gtimg.com/lulu/theme/modern/js/plugin/jquery.js"></script>
+<script src="http://qidian.gtimg.com/yuewen/join/js/template.js"></script>
+<script>
+(function (win) {
+	var elAside = $('#aside'), elArticle = $('#article');
+
+	var cache = {};
+
+	var ACTIVE = 'active';
+
+	elAside.delegate('a', 'click', function (event) {
+		event.preventDefault();
+
+		var elNav = $(this);
+
+		if (elNav.hasClass(ACTIVE)) {
+			return;
+		}
+		var url = elNav.attr('href');
+
+		var callback = function () {
+			elAside.find('.' + ACTIVE).removeClass(ACTIVE);
+			elNav.addClass(ACTIVE);
+		};
+
+		if (cache[url]) {
+			elArticle.html(cache[url]);
+			callback();
+		} else {
+			elNav.addClass('loading');
+			$.ajax({
+				url: url,
+				success: function (html) {
+					// 1. 取<body>标签里面内容
+					html = html.replace(/[\w\W]*<body>([\w\W]*)<\/body>[\w\W]*/i, '$1');
+					// 2. 图片相对地址替换处理
+					html = html.replace(/\.\.\/images/g, './images');
+					// 刷新右侧内容
+					elArticle.html(html);
+
+					callback();
+				},
+				error: function () {
+					elArticle.html('<div style="line-height:400px; text-align: center;">网络异常，加载失败！</div>');
+				},
+				complete: function () {
+					elNav.removeClass('loading');
+				}
+			});
+		}
+	});
+
+
+	// 左侧导航数据请求
+	$.getJSON('./menu.json', function (json) {
+		$('#aside').html(template("tplMenu", json)).show().find('a').eq(0).trigger('click');
+	});
+
+	// 索引定位
+	elArticle.delegate('a', 'click', function (event) {
+		var href = this.getAttribute('href');
+
+		if (/^#/.test(href)) {
+			$(win).scrollTop($(href).offset().top);
+			event.preventDefault();
+		}
+	});
+
+	// 返回顶部
+	var elBacktop = $('#backtop');
+	$(win).on('scroll', function () {
+		var st = $(win).scrollTop();
+		if (st > 0) {
+			elBacktop.show();
+		} else {
+			elBacktop.hide();
+		}
+	});
+	elBacktop.on('click', function (event) {
+		event.preventDefault();
+		$(win).scrollTop(0);
+	});
+})(window);
+</script>
+</body>
+</html>
