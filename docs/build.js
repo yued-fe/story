@@ -57,13 +57,18 @@ stat = fs.stat;
 			files.forEach(function (folderName) {
 				if (folderName === 'article') {
 					// 文章以.html的文件名作为信息内容
+					// 文章文件名需要以日期开头，以保证顺序
 					fs.readdir('./article', function (err, files) {
 					    if (err) {
 					        throw err;
 					    }
 					    files.forEach(function(filename) {
-					    	json.article.push({
-								menu: filename.split('.')[0],
+					    	var menu = filename.split('.')[0];
+					    	if (menu.split('_').length > 1) {
+					    		menu = menu.split('_')[1];
+					    	}
+					    	json.article.unshift({
+								menu: menu,
 								url: './article/' + filename
 							});
 					    });
@@ -74,7 +79,7 @@ stat = fs.stat;
 					});
 				} else if (/^\d{6}$/.test(folderName)) {
 					// 月份直接
-					json.daily.push({
+					json.daily.unshift({
 						menu: self.yearMonthConvert(folderName),
 						url: './'+ folderName +'/'
 					});
@@ -115,7 +120,7 @@ stat = fs.stat;
 			    		arrDay.push(day);
 			    		// 读取对应日期日常内容
 			    		var data = fs.readFileSync(folderName + '/' + filename, 'utf8');
-			    		
+
 			    		// 取<body>标签里面内容
 					    var htmlDayBody = data.replace(/[\w\W]*<body>([\w\W]*)<\/body>[\w\W]*/i, '$1');
 
