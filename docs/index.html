@@ -41,7 +41,7 @@
 <div class="main">
 	<!-- 侧边栏 -->
     <!-- 侧边栏 -->
-    <aside id="aside"></aside>    
+    <aside id="aside" style="display: block; visibility: hidden;"></aside>    
     <!-- 主内容 -->
     <section>
     	<article id="article">
@@ -125,7 +125,9 @@
 
 	// 左侧导航数据请求
 	$.getJSON('./menu.json', function (json) {
-		$('#aside').html(template("tplMenu", json)).show().find('a').eq(0).trigger('click');
+		$('#aside').html(template("tplMenu", json)).css({
+			visibility: 'visible'
+		}).find('a').eq(0).trigger('click');
 	});
 
 	// 索引定位
