@@ -81,7 +81,7 @@ stat = fs.stat;
 					// 月份直接
 					json.daily.unshift({
 						menu: self.yearMonthConvert(folderName),
-						url: './'+ folderName +'/'
+						url: './'+ folderName +'/?r=' + new Date().getTime()
 					});
 				}
 			});
@@ -123,6 +123,9 @@ stat = fs.stat;
 
 			    		// 取<body>标签里面内容
 					    var htmlDayBody = data.replace(/[\w\W]*<body>([\w\W]*)<\/body>[\w\W]*/i, '$1');
+
+					    // 图片lazyLoad
+					    htmlDayBody = htmlDayBody.replace(/\ssrc/g, ' data-src');
 
 					    // 主动增加标题
 					    htmlDayBody = '<h3 id="'+ folderName + day +'">'+ yearMonth + day + '日</h3>' + htmlDayBody;
