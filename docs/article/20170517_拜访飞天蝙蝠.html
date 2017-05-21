@@ -1,0 +1,474 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>哇牛叉学院之基于VoiceOver的移动端无障碍阅读访问</title>
+<style>
+pre { border: 1px solid #ccc; background: #f5f5f5; padding: 10px; word-wrap: break-word; white-space: pre-wrap; font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace; }
+blockquote {
+	background-color:  #f0f3f9;
+	padding: 1em;
+}
+img {
+	max-width: 100%; height: auto;
+}
+</style>
+</head>
+
+<body>
+<h1>哇牛叉学院之基于VoiceOver的移动端无障碍阅读访问</h1>
+<blockquote>
+	<p>本集出场人物：米亚、起床气、5号、阿力</p>
+	<p>特别感谢：康康兔</p>
+</blockquote>
+<p>今日，学院布置了一个新任务，要去佘山拜访一位名为“飞天蝙蝠”的前辈，亲自上门取一件重要的宝物。并特别指定了『米亚』『起床气』『5号』三个感知型同学前往，同时安排『阿力』一同前往，保护诸位同学以及宝物的安全护送。至于这个宝物是什么，上面并没有明说，只是说到了那里自然就会知道。</p>
+
+<p>按照地图指引，穿过眉公钓鱼矶，黄巢洞，远远就看到一座古味浓郁的联排建筑，走近一看，「飞天山庄」，哈，就是这里，正要敲门，突然就传来缓慢但略显尖利的声音：“来着何人？”</p>
+<p>“前辈你好，我们是‘哇牛叉学院’的学生，过来拜访前辈，顺便取一件宝物。”</p>
+<p>“亮出凭证。”</p>
+<p>『米亚』取出收据，正要奇怪给谁的时候，突然门就开了，“你们进来吧，直接去大厅，我稍后就到！”</p>
+<p>片刻后，一位三四十岁中年人左手抓着个白色的盒子快步进来，直接坐在了主座上。突然大伙心中一惊，因为大家发现这人的眼睛全白，略显瘆人。于是，『5号』忍不住问道，“请问您是‘飞天蝙蝠’前辈？”</p>
+<p>“你难道感觉不出来吗？”</p>
+<p>“这...”，突然的一顿憋让『5号』一时不知如何，结果好死不活又问了句，“前辈是不是有眼疾？”</p>
+<p>“哈？你感觉不出来，难道还看不出来吗？”</p>
+<p>“...”，突然发现这个老头都这么冲，大家都没在说话，反而老者先开口了：“剩下的一半钱款和刚才订金的收据留下，这个你们学院要的‘货物’就可以拿走了。”</p>
+<p>大家互相看了看，估计心中的想法都是一样的，咱们赶快人完成任务，赶快撤，连口茶都没有的地方，实在没有久留的必要，“好！”只见『米亚』拿出一个小瓶子压住订金收据，回复道，“这是你要的东西，前辈！”</p>
+<p>只见中年人右手准确抓起小瓶子，然后立马一层浅浅的“泉之力”包围这密封的放置“泉钻”的小瓶子，眉头一皱，似乎在发力，然后立马又舒展开，“恩，不错，你们学院产出的‘泉钻’品质还是一如既往的好，东西你们可以拿走了。”说完左手一扔。</p>
+<p>我擦，众人心里一万个草泥马奔过，这么贵重的宝贝居然扔得这么荡气回肠，可是值我们一年的工资啊！</p>
+<p>好在『阿力』反应快，稳稳接住了，不然就玩大发了。</p>
+<p>“那好，前辈，我们还有事就先告辞了！”说完，众人起身准备离去，刚走出去没几步，背后就传来尖利地听起来怪怪的声音：“你们不验货倒是看得起我，我倒是蛮开心的，但是就是不知道没有我的指点，你们中有没有人会使用这个东西呢？”</p>
+<p>众人一听立马停住了脚步，正在疑惑之时，又有声音传来，“你们学院应该把感知型学生都安排到这次任务里面了吧，难道你们认为这是巧合？”众人面面相觑，中年人继续道：“不管怎样，货还是要验的，不然你们出去被调了包，岂不成了我的锅？”</p>
+<p>恩，说得很有道理，于是，大家又都回到座位上，当着中年人面打开那个白色的盒子，结果映入眼帘的是一个巴掌大长方形薄薄的有圆角的物体，有明显的正反两面，反面还有一个缺了一口的苹果图标。</p>
+<p>中年人自己主动开口了：“这就是我花了数年时间制作的无障碍访问神器，我称之为iPhone，特别适合感知型异能者使用，通过特定操作把感知到的精灵波动输入其中，就可以大致知道精灵的想法，我现在就教你们如何使用。”</p>
+
+<h3>盲人远比你想象的感知敏锐</h3>
+<p></p>
+
+<h3>先了解一些ARIA无障碍和VoiceOver的基本知识</h3>
+<p>首先，你们需要了解无障碍访问中的ARIA。</p>
+<p>ARIA全称“Accessible Rich Internet Applications（可访问的富互联网应用）”，在当下讨论ARIA基本上都是为读屏设备或软件，而读屏设备或软件的使用者多是视力障碍人员，因此，ARIA约定俗成就成了对视障用户的无障碍访问支持技术的代称了。</p>
+<p>首先，了解下常见的读屏软件，如下列表：</p>
+<p>移动端：</p>
+<ul>
+<li>Android: TalkBack</li>
+<li>Android: Funtouch</li>
+<li>iPhone: VoiceOver</li>
+</ul>
+<p>桌面端：</p>
+<ul>
+<li>Windows:  NVDA, JAWS</li>
+<li>Chrome:  ChromeVox</li>
+<li>OSX: VoiceOver</li>
+</ul>
+<p>ARIA总共有3大部分组成，如下：</p>
+<ol>
+<li>role属性值</li>
+<li>aria属性</li>
+<li>aria状态属性</li>
+</ol>
+<p>这篇文章“<a href="http://www.zhangxinxu.com/wordpress/?p=2277">WAI-ARIA无障碍网页应用属性完全展示</a>”有非常详尽的翻译展示，我这里列举一些常用的：</p>
+<h4>role属性值</h4>
+<pre>role="tab",
+role="button",
+role="radio",
+role="checkbox",
+role="link",
+…
+</pre>
+<h4>aria属性</h4>
+<pre>aria-haspopup,
+aria-label,
+aria-owns
+…
+</pre>
+<h4>aria状态属性</h4>
+<pre>aria-checked,
+aria-checked,,
+aria-selected,
+aria-expanded,,,
+aria-hidden,,
+aria-invalid,
+…
+</pre>
+
+<p>然后，需要知道如何开启iPhone的VoiceOver？</p>
+<p>最快捷的是使用siri，“打开VoiceOver”，如果siri卖萌说不知道VoiceOver是什么鬼？那就试试“请打开VoiceOver”，或者手动开始，路径为：设置→通用→辅助功能→VoiceOver（在第一个，见下图）</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_173535.png" alt="iPhone VoiceOver位置" width="320" height="569"></p>
+<p>在iPhone上VoiceOver开启后，操作方式有个根本的变化：</p>
+<ol>
+<li><code>touchstart</code>或<code>touchmove</code>行为完全变成了内容识别与读取，没有任何web交互行为的发生！</li>
+<li>如果你想点击某元素，必须先<code>touchstart</code>或<code>touchmove</code>选中，然后再双击，直接双击是没有用的；</li>
+<li>如果你想滚动，三指滑动；</li>
+<li>如果你想拖动滑块，先<code>touchstart</code>或<code>touchmove</code>选中，然后连续轻触并滑动（手指不要抬起）；</li>
+</ol>
+
+<p>VoiceOver开启后的手势如下图：</p>
+<p><img alt="VoiceOver手势图" width="457" height="509" src="http://image.zhangxinxu.com/image/blog/201701/shoushi.png"></p>
+
+
+<p>所以，很多人不小心打开VoiceOver后发现关不了了，就是因为还是老的操作习惯。想要关闭，最快捷siri；如果只卖萌不行动，那就手动按部就班关闭：（轻触，再双击）设置→（轻触，再双击）通用→（轻触，再双击）辅助功能→（轻触，再双击）VoiceOver->（轻触，再双击）关闭。</p>
+
+<p>下面开始教一些真正的实战。</p>
+
+<h3>基于VoiceOver的移动端无障碍阅读访问实战</h3>
+
+<h4>VoiceOver下无障碍访问基础特性</h4>
+<p>首先，大家应该都知道，HTML元素还可以分为非替换元素和替换元素，常见的替换元素包括<code>&lt;img&gt;</code>，<code>&lt;input&gt;</code>，<code>&lt;img&gt;</code>，<code>&lt;button&gt;</code>，<code>&lt;iframe&gt;</code>，<code>&lt;video&gt;</code>，<code>&lt;object&gt;</code>等。</p>
+<p>除了内容可替换以及一些CSS行为差异外，在ARIA无障碍访问这一领域也是有着巨大的差异的。</p>
+<h4>1. 非替换元素</h4>
+<p><strong>① touch页面任何区域一定会有信息读取！</strong></p>
+<p>非VoiceOver状态，你点击页面空白，是不会有什么反应的，但是开启VoiceOver后则完全不同，touch页面任何区域一定会有信息读取，包括空白区域，而轻触空白区域的读取遵循下面2个规则：</p>
+<ol>
+<li>就近原则；</li>
+<li>穿透规则；</li>
+</ol>
+<p>所谓“就近原则”，比方说点击下图所示的位置：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/tap-blank.png" alt="空白区域点击示意图" width="438" height="152"></p>
+<p>结果选中和读取的内容是“免费 链接 导航 标志性内容”，哪个近读哪个。</p>
+<p>所谓“穿透规则”，比方说点击下图所示的半透明黑色蒙层位置，请问读出来的信息是？</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/overlay-read.png" alt="蒙层点击示意图" width="401" height="298"></p>
+<p>结果不是“信仰神国”，也不是“读至&#8230;”，读取的信息而是蒙层下面的图片列表信息！没错，直接穿透了。这个和正常浏览方式下的点击世界观是不一样的。但是，显然，此处穿透不是我们想要的，怎么避免呢？这个后面会介绍。</p>
+<p><strong>② 必须有文字内容才会读取</strong></p>
+<ol>
+<li>
+<p>如果元素不含文字内容，是不会读取的，例如，下图图标轻触是被直接忽略的：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_184647.png" alt="图标截图示意" width="160" height="170"></p>
+<p>相关HTML代码如下：</p>
+<pre>&lt;a href&gt;
+  <span style="color:#cd0000;">&lt;i class="icon-free"&gt;&lt;/i&gt;</span>    <span style="color:green;">&lt;!-- VoiceOver忽略 --&gt;</span>
+  &lt;h4&gt;免费&lt;/h4&gt;
+&lt;/a&gt;
+</pre>
+</li>
+<li>
+<p>还没完，如果我们增加<code>title</code>属性描述内容，那会不会读取呢？</p>
+<pre>&lt;i class="icon-free" title="图标"&gt;&lt;/i&gt;    <span style="color:green;">&lt;!-- VoiceOver读不读呢？ --&gt;</span></pre>
+<p>答案是：<strong>依旧忽略！</strong></p>
+</li>
+<li>
+<p>但是，注意，但是，有一个例外，那就是<code>&lt;a&gt;</code>元素，如果这里的<code>&lt;i&gt;</code>标签换成<code>&lt;a&gt;</code>，则<code>title</code>属性就可以被VoiceOver宠幸。</p>
+<pre>&lt;a href class="icon" title="图标"&gt;&lt;/a&gt;       <span style="color:green;">&lt;!-- 读：图标 链接 --&gt;</span></pre>
+</li>
+<li>
+<p>还是<code>&lt;i&gt;</code>标签，但是，我们不是使用<code>title</code>属性，还是ARIA原生的规范的<code>aria-label</code>信息描述属性，那会不会读取呢？</p>
+<pre>&lt;i class="icon-free" aria-label="图标"&gt;&lt;/i&gt;</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，如果我们里面写入了文字，但是是<code>display:none</code>隐藏的，那会不会读取呢？</p>
+<pre>&lt;i class="icon-free"&gt;   
+  &lt;span hidden&gt;图标&lt;/span&gt;
+&lt;/i&gt;
+</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，如果我们里面写入了文字，但是使用的是<code>visibility:hidden</code>隐藏，那会不会读取呢？</p>
+<pre>&lt;i class="icon-free"&gt;
+  &lt;span style="visibility:hidden;"&gt;图标&lt;/span&gt;
+&lt;/i&gt;
+</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，假设我们使用<code>text-indent</code>缩进让文字隐藏到屏幕之外，那总该要读取了吧？</p>
+<pre>&lt;i class="icon" style="text-indent:-999px;"&gt;图标&lt;/i&gt;
+</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，假如我们的<code>text-indent</code>缩进不要那么猛，仅仅是图标容器外，但是在屏幕内，那会不会读取呢？</p>
+<pre>&lt;i class="icon" style="text-indent:-10%;"&gt;图标&lt;/i&gt;</pre>
+<p>答案是：<strong style="color:green;">会读取！</strong>但是，选中时候的外框明显不在图标所在的位置，而是文字所在的位置。</p>
+</li>
+<li>
+<p>还没完，假设我们使用CSS <code>clip</code>属性隐藏，那会不会读取呢？</p>
+<pre>&lt;i class="icon"&gt;
+    &lt;span style="position:absolute;clip:rect(0,0,0,0);"&gt;
+        图标
+    &lt;/span&gt;
+&lt;/i&gt;
+</pre>
+<p>答案是：<strong style="color:green;">会读取！</strong></p>
+</li>
+<li>
+<p>还没完，假设我们使用绝对定位屏幕外隐藏，那会不会读取呢？</p>
+<pre>&lt;i class="icon"&gt;
+    &lt;span style="position:absolute;left:-999px;"&gt;
+        图标
+    &lt;/span&gt;
+&lt;/i&gt;</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，如果是相对定位屏幕外隐藏呢？</p>
+<pre>&lt;i class="icon"&gt;
+    &lt;span style="position:relative;left:-999px;"&gt;
+        图标
+    &lt;/span&gt;
+&lt;/i&gt;</pre>
+<p>答案是：<strong>忽略，不会读取！</strong></p>
+</li>
+<li>
+<p>还没完，我还有最后一口气，终极绝招，如果文字是透明的，那会不会读取呢？</p>
+<pre>&lt;i class="icon" style="color:transparent;"&gt;图标&lt;/i&gt;</pre>
+<p>恭喜你，<strong style="color:green;">会读取！</strong></p>
+</li>
+</ol>
+<p><strong>③ 文字基于内联盒子片段读取</strong></p>
+<p>如下一段简单常见的HTML代码：</p>
+<pre>&lt;p&gt;总共消费&lt;output&gt;500&lt;/output&gt;元&lt;/p&gt;</pre>
+<p>请问，<code>touchstart</code>或<code>touchmove</code>该<code>&lt;p&gt;</code>元素的时候读取的信息是？</p>
+<p>结果：要么“总共消费”，要么“五百”，要么“元”。是不会连续读取“总共消费500元”的。完全是基于内联盒子来读取的，例如这里“总共消费”和“元”是两个“匿名内联盒子”，外面有<code>output</code>标签的<code>"500"</code>是内联盒子。</p>
+<p>但是，如果是<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>标题元素，则例外，例如：</p>
+<pre>&lt;h6&gt;总共消费&lt;output&gt;500&lt;/output&gt;元&lt;/h6&gt;</pre>
+<p>读“总共消费500元 标题级别6”。</p>
+<h4>2. 对于替换元素</h4>
+<p><strong>① 替换元素永远不会穿透</strong></p>
+<p>比方说一开始的这个图：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/overlay-read.png" alt="蒙层点击示意图" width="401" height="298"></p>
+<p>要避免穿透，我们使用<code>role</code>属性将标签角色变成替换元素，例如设置<code>role="button"</code>，如下截图：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_193538.png" alt="role button示意" width="560" height="147"></p>
+<p><strong>② 替换元素title属性读取</strong></p>
+<p>还是上面那个免费图形：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_184647.png" alt="图标截图示意" width="160" height="170"></p>
+<ol>
+<li>
+<p>如果HTML是下面这样：</p>
+<pre>&lt;i class="icon" role="img" title="图标"&gt;&lt;/i&gt;</pre>
+<p>则<code>title</code>属性值是会读取的，这里会读“图标 图像”。</p>
+</li>
+<li>
+<p>如果角色是替换元素，则<code>aria-label</code>描述信息也会读取：</p>
+<pre>&lt;i class="icon" role="img" aria-label="图标"&gt;&lt;/i&gt;</pre>
+</li>
+<li>
+<p><code>role="img"</code>元素里面文本不读取，这个很好理解，原生的<code>&lt;img&gt;</code>图片标签里面是不能哟文字内容的。</p>
+<pre>&lt;i class="icon" role="img"&gt;图标&lt;/i&gt;</pre>
+<p>此时只会读“图像”，里面的文字“图标”被忽略了。</p>
+</li>
+<li>
+<p><code>role="button"</code>非<code>display</code>隐藏文本均读取，也就是<code>color</code>透明隐藏，<code>font-size:0</code>隐藏，<code>visibility:hidden</code>隐藏，<code>text-indent</code>缩进隐藏，<code>absolute</code>屏幕外隐藏。。。都是读取的。</p>
+<p>但是，如果是<code>display:none</code>，则忽略：</p>
+<pre>&lt;i class="icon" role="button"&gt;
+  &lt;span hidden&gt;图标&lt;/span&gt;    <span style="color:green;">&lt;!-- “图标”不读取 --&gt;</span>
+&lt;/i&gt;
+</pre>
+</li>
+<li>
+<p>设置<code>aria-hidden="true"</code>元素不可读不可点。</p>
+<pre>&lt;i class="icon" role="button"&gt;
+  &lt;span aria-hidden="true"&gt;图标&lt;/span&gt;    <span style="color:green;">&lt;!-- “图标”不读取 --&gt;</span>
+&lt;/i&gt;
+</pre>
+<p><code>aria-hidden="true"</code>是ARIA无障碍处理售后非常常用的一个属性，所有的装饰性元素或者点击区域太小的元素都应该设置<code>aria-hidden="true"</code>，避免无谓信息对用户的干扰。</p>
+</li>
+<li>
+<p>当内容，标题等信息同时存在时候的读取顺序是：<strong>优先内容，然后类型，然后标题</strong>，例如：</p>
+<pre>&lt;i class="icon" role="button" title="示意"&gt;图标&lt;/i&gt;</pre>
+<p>读：“图标，按钮”，明显停顿后，“示意”。注意，读<code>title</code>属性之前有个非常非常明显的停顿，停顿时间之长，感觉就像朗读人断片了一样。</p>
+</li>
+<li>
+<p><code>aria-label</code>作用和文字内容类似，但是优先级更高。也就是同时存在的时候，文字内容读取会被忽略，例如：</p>
+<pre>&lt;i role="button" aria-label="图标1" title="示意"&gt;图标2&lt;/i&gt;
+</pre>
+<p>读：“图标1，按钮”，明显停顿后，“示意”。“图标2”不会读取，被忽略！</p>
+<p><strong>补充于2017-01-23</strong><br />
+如果希望读内部信息，同时又自定义一些信息，可以使用<code>aria-describedby</code>，<code>aria-describedby</code>的行为表现和语义有些类似于<code>title</code>属性，<code>aria-describedby</code>的属性值只能是元素<code>id</code>，这非常适合保证原始标签语义同时告知辅助信息的场景，例如：</p>
+<pre>&lt;h3 aria-describedby="ariaDesc1"&gt;热门小说&lt;/h3&gt;
+&lt;span id="ariaDesc1" aria-hidden="true"&gt;编辑推荐&lt;/span&gt;</pre>
+</li>
+<li>
+<p>大段描述可以使用<code>aria-labelledby</code>或<code>aria-describedby</code>，例如：</p>
+<pre>&lt;i role="button" aria-labelledby="id"&gt;图标2&lt;/i&gt;
+&lt;p hidden id="id"&gt;这是一个...图标&lt;/p&gt;</pre>
+<p>读：“这是一个…图标，按钮”。</p>
+<p>可以看到，目前描述元素即使<code>display:none</code>也是可以读取的。<code>aria-labelledby</code>或<code>aria-describedby</code>的属性值对应描述信息元素的<code>id</code>属性值，可以是多个，使用空格分隔，例如：</p>
+<pre>&lt;i role="button" aria-labelledby="id1 id2 id3"&gt;图标2&lt;/i&gt;</pre>
+</li>
+<li>
+<p><code>&lt;nav&gt;</code>会读“导航，标志性内容”，<code>&lt;header&gt;</code>读“横幅，标志性内容”，<code>&lt;footer&gt;</code>读“页脚，标志性内容”。</p>
+<p>然后，若触发的是子元素，仅第一次触发读取上面的信息。例如，导航中有两个链接，则轻触第一个的时候，读“xx, 链接，导航，标志性内容”，紧接着轻触第二个链接的时候，仅仅会读““xx, 链接”。</p>
+<p>出乎意料的是，<code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>不会读列表，需要增加<code>role="listbox"</code>，这样，触发<code>&lt;li;&gt;</code>元素的时候会读“列表，第一个”。</p>
+<p>所有<code>form</code>原生控件都能准确读取，包括状态。因此，一定要养成基于元素表单控件实现交互效果的习惯，控件丑没关系，透明度<code>opacity:0</code>覆盖处理之，例如，单选项，复选框效果等。</p>
+</li>
+<li>
+<p>后面这些角色设置可让断片文本连读：<code>role="button"</code>, <code>role="tab"</code>, <code>role="heading"</code>, <code>role="combobox"</code>等。</p>
+<pre>&lt;p role="button"&gt;总共消费&lt;output&gt;500&lt;/output&gt;元&lt;/p&gt;</pre>
+<p>读：“共消费500元，按钮”。</p>
+<p>虽然很好地解决了多个内联元素读取“断片”的问题，但是，不合语义，明明不是按钮，你说是按钮，问题很大。</p>
+<p>后来，经过我的各种尝试，发现了一个<strong>无语义文本连读技巧</strong>，就是使用：<code>role="option"</code>。</p>
+<p><code>option</code>值源自HTML下拉列表的<code>&lt;option&gt;</code>标签。<code>option</code>可以让里面文字连读的原理是，原生的<code>&lt;option&gt;</code>标签中只能是纯文本，会忽略一切的HTML标签，于是，设置了<code>role="option"</code>，就会当<code>&lt;output&gt;</code>标签不存在，从而连读，并且选中的高亮框范围也更加合理。</p>
+<p><strong>补充于2017-01-23</strong><br />
+使用<code>role="option"</code>连读的时候会可能会存在内容断句不清的情况。例如：</p>
+<pre>&lt;li class="fans-li" role="option"&gt;
+    &lt;div class="rel"&gt;&lt;aria&gt;粉丝第1名：我是大帅哥&lt;/aria&gt;&lt;/div&gt;
+     &lt;div class="rel"&gt;
+      &lt;aria&gt;粉丝等级：&lt;/aria&gt;LV4
+    &lt;/div&gt;
+&lt;/li&gt;
+</pre>
+<p>此时朗读效果为“粉丝第1名 我是大帅哥粉丝等级 L V 4”（空格表示停顿）。实际上，“我是大帅哥粉丝等级”中间应该有明显的断句。怎么办呢？可以使用英文句号，也就是点结束符，可以产生明显断句，比全角的冒号“：”似乎还要断句明显。修改如下（“我是大帅哥后面加了个点<code>.</code>，隐藏”）：</p>
+<pre>&lt;li class="fans-li" role="option"&gt;
+    &lt;div class="rel"&gt;&lt;aria&gt;粉丝第1名：我是大帅哥.&lt;/aria&gt;&lt;/div&gt;
+     &lt;div class="rel"&gt;
+      &lt;aria&gt;粉丝等级：&lt;/aria&gt;LV4
+    &lt;/div&gt;
+&lt;/li&gt;
+</pre>
+</li>
+<li>
+<p><code>role</code>属性值设置会覆盖原始的语义，例如：</p>
+<pre>&lt;a href role="option"&gt;
+  总共消费&lt;output&gt;500&lt;/output&gt;元
+&lt;/a&gt;</pre>
+<p>读：“共消费500元”，不会提示“链接”。</p>
+<p>由于<code>&lt;option&gt;</code>标签里面只能是纯文本，因此，<code>role="option"</code>连里面的一切语义也会忽略，于是：</p>
+<pre>&lt;li role="option"&gt;
+  &lt;a href&gt;
+    总共消费&lt;output&gt;500&lt;/output&gt;元
+  &lt;/a&gt;
+&lt;/li&gt;</pre>
+<p>读：“共消费500元”，不会提示“链接”。</p>
+<p>如果遇到这种尴尬，可以这么处理：</p>
+<pre>&lt;li role="link"&gt;
+  &lt;a href role="option"&gt;
+    总共消费&lt;output&gt;500&lt;/output&gt;元
+  &lt;/a&gt;
+&lt;/li&gt;gt;
+</pre>
+<p>也就是原语义外置。此时读：“共消费500元，链接”，这下没毛病了。</p>
+</li>
+</ol>
+<h4>3. 交互与aria</h4>
+<ol>
+<li>
+<p>VoiceOver开启时，原来的<code>touchmove</code>是高成本操作，因此，需要增加详细的描述信息，否则用户根本不知道是个什么鬼？例如下面一段截图示意：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/ad-slide.png" alt="详细描述示意" width="480" height="78"></p>
+</li>
+<li>
+<p>复杂交互场景，或者和原生控件交互不一致的交互场景，需要添加交互场景描述，例如下面示意：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/code-from.png" alt="自定义下拉交互截图" width="384" height="115"></p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/code-1.png" alt="代码示意截图1" width="547" height="53"></p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/code-2.png" alt="代码示意截图2" width="623" height="66"></p>
+</li>
+<li>
+<p>需要同步改变描述和状态，例如面板展开和收起的时候，例如：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/more-aria-1.png" alt="列表收起时候截图" width="351" height="248"></p>
+<p>此时，先要使用<code>role="menuitem"</code>定义是菜单项，然后使用<code>aria-expanded</code>标记是展开还是收起，VoiceOver会自动根据此状态值读出对应的中文状态描述的。</p>
+<pre>&lt;a href class="icon-more" title="更多" role="menuitem" <span style="color:#cd0000;">aria-expanded="false"</span>&gt;&lt;/a&gt;</pre>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/more-aria-2.png" alt="列表展开时候截图" width="356" height="275"></p>
+<p>展开时候<code>aria-expanded</code>设为<code>true</code>：</p>
+<pre>&lt;a href class="icon-more" title="收起更多" role="menuitem" <span style="color:#cd0000;">aria-expanded="true"</span>&gt;&lt;/a&gt;</pre>
+<p>上面例子中的<code>aria-expanded</code>就是ARIA中的状态属性，常用的其他属性还包括（需要配合特定的<code>role</code>属性值才有效）：</p>
+<ul>
+<li><code>aria-expanded</code> 展开还是收起，菜单，自定义下拉等用的比较多。</li>
+<li><code>aria-checked</code> 选中还是未选。</li>
+<li><code>aria-selected</code> 选中还是未选。</li>
+<li><code>aria-disabled</code> 禁用还是可用。</li>
+<li><code>aria-hidden</code> 隐藏还是显示。</li>
+<li><code>aria-invalid</code> 验证正确还是错误。</li>
+</ul>
+<p>其中<code>aria-checked</code>和<code>aria-selected</code>含义类似，那什么时候该用什么呢？</p>
+<p><code>aria-checked</code>多用在单选复选上，<code>aria-selected</code>多用在下拉列表上，或者选项卡（<code>role="tab"</code>）上。</p>
+<p>说到<code>role="tab"</code>选项卡，有一个注意点需要提一下，<code>role="tab"</code>一定要加在平级的兄弟元素上，例如：</p>
+<pre>&lt;nav&gt;
+  &lt;h3 role="tab"&gt;
+    &lt;a href&gt;选项卡1&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;h3 role="tab"&gt;
+    &lt;a href&gt;选项卡2&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;h3 role="tab"&gt;
+    &lt;a href&gt;选项卡3&lt;/a&gt;
+  &lt;/h3&gt;
+&lt;/nav&gt;</pre>
+<p>千万不要这样：</p>
+<pre>&lt;nav&gt;
+  &lt;h3&gt;
+    &lt;a href role="tab"&gt;选项卡1&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;h3&gt;
+    &lt;a href role="tab"&gt;选项卡2&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;h3&gt;
+    &lt;a href role="tab"&gt;选项卡3&lt;/a&gt;
+  &lt;/h3&gt;
+&lt;/nav&gt;</pre>
+<p>因为后面每个选项卡会认为就一个单独的选项卡，读“共1个”，前者可以正确读“共3个”。另外，VoiceOver读取的时候不是读“选项卡”，听上去是“标间”，开房吗？</p>
+</li>
+</ol>
+<p><strong>aria交互启示</strong></p>
+<ol>
+<li>浮层半透明遮罩如果有交互，需分层，并设置<code>role</code>，如果点击整片区域都有行为，不要取巧使用冒泡，因为在无障碍处理的时候会很啰嗦，直接使用一个透明图层覆盖，设置合适的<code>role</code>以及描述；</li>
+<li>浮层右上角要有关闭按钮，哪怕是透明的，千万不要信了设计师的邪，认为例如，弹框上有取消按钮，还搞个关闭干什么，不好看啰嗦。其实对于视力不好的用户，最习惯的是去屏幕右上区域找到关闭按钮。又或者浮层可以直接手指一划移出，不需要关闭按钮，那都是很自以为是的想法。如果设计师坚持，我们做开发的也需要在右上角加一个正常用户看不见的透明的关闭按钮，读屏设备是可以获取的。浮层关不掉是非常非常体验差的一件事情。</li>
+<li>自定义控件最好使用原生控件覆盖(opacity:0)，因为你这样处理后，根本不要再有任何额外的HTML或者JS支持就能有完美的无障碍访问了。</li>
+<li>交互样式改变可以尝试直接使用aria属性控制，一举两得，例如，使用<code>aria-checked</code>属性而不是<code>.checked</code>类名，可以有效降低后期无障碍支持成本。</li>
+<li>避免自定义的<code>touchmove</code>交互，因为开启读屏模式后，<code>touchmove</code>交互成本很高；</li>
+</ol>
+<h4>4. 其他ARIA无障碍支持经验补充</h4>
+<ol>
+<li><strong>将视觉信息转换成文字信息</strong>
+<p>例如下图：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_205738.png" alt="搜索列表效果示意" width="368" height="183"></p>
+<p>这是个搜索列表，其中，有两个小色块，我们一看就能看明白是“标签”，而后面2个列表右侧是灰色文字，我们可以看出来是作者名。但是，对于靠触摸的盲人用户，颜色，大小包括位置都是看不到的，因此，他就很难区分这些信息是什么意思，VoiceOver会这么读：</p>
+<p style="font-family: kaiti;">巫妖王作者<br />
+武侠分类<br />
+武说谭家三十<br />
+武侠世界独孤起步
+</p>
+<p>估计用户心中是这幅表情：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_210109.png" alt="黑人问号" width="242" height="158"></p>
+<p>因此，我们需要将视觉信息转换成文字，我的做法将必要的文字内容使用<code>clip</code>隐藏放在标签中：</p>
+<pre>aria { 
+  position: absolute;
+  clip: rect(0,0,0,0);
+}</pre>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_210414.png" alt="文字隐藏示意" width="461" height="481"></p>
+<p>此时，设备读取就是：</p>
+<p style="font-family: kaiti;">巫妖王 标签：作者<br />
+武侠 标签：分类<br />
+武说 作者：谭家三十<br />
+武侠世界 作者：独孤起步
+</p>
+</li>
+<li><strong>小区域重要标志信息合并</strong>
+<p>有些信息很重要，但是占据空间很小，或者隐蔽，此时，最好信息合并，例如，图书上的限免标志：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_210713.png" alt="图书上的限免标志" width="177" height="137"></p>
+<p>我们可以给“限免”标志设置<code>aria-hidden="true"</code>，然后把该信息和图片信息合并，如下代码截图示意：</p>
+<p><img src="http://image.zhangxinxu.com/image/blog/201701/2017-01-20_210913.png" alt="“限免”信息合并代码示意"></p>
+</li>
+<li><strong>关于SVG的无障碍访问</strong>
+<p>请问，有个SVG图标代码如下，清除轻触是否会有信息读取？</p>
+<pre>&lt;svg class="icon icon-arrow-l”&gt;
+    &lt;title&gt;返回&lt;/title&gt;
+    &lt;use xlink:href="#icon-arrow-l"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</pre>
+<p>结果，只会读“图像”，然后就没有然后了。这其实跟上面<code>role="img"</code>的<code>&lt;i&gt;</code>标签里面文字不读原理是一样的，就是原生图像里面是不会有文字信息的，因此，这里<code>&lt;title&gt;</code>标签中的“返回”就被忽略了。</p>
+<p>还没完，我们看下面的HTML代码：</p>
+<pre>&lt;a href&gt;
+  &lt;svg class="icon icon-arrow-l”&gt;
+    &lt;title&gt;返回&lt;/title&gt;
+    &lt;use xlink:href="#icon-arrow-l"&gt;&lt;/use&gt;
+  &lt;/svg&gt;
+&lt;/a&gt;
+</pre>
+<p>请问，会有信息读取吗？</p>
+<p>答案是：会读“返回，链接”。因为此时SVG从图像性质变成了链接内容。</p>
+<p>有人会问了，如果我想单纯SVG标签读取信息怎么办？可以如下处理：</p>
+<pre>&lt;svg <span style="color:#cd0000;">role="img" aria-label="返回"</span>&gt;
+    &lt;title&gt;返回&lt;/title&gt;
+    &lt;use xlink:href="#icon-arrow-l"&gt;&lt;/use&gt;
+&lt;/svg&gt;
+</pre>
+<p>此时，会读“图像，返回”。</p>
+</li>
+</ol>
+
+
+<p style="color:gray;"><small>PS: 本故事世界观和背景可参见：<a href="https://github.com/yued-fe/world-view" target="_blank">https://github.com/yued-fe/world-view</a></small></p>
+</body>
+</html>
