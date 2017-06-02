@@ -38,6 +38,10 @@
 		text-indent: -999px;
 		background-color: #fff;
 	}
+
+	article p > img {
+		margin: 0 0 5px 0;
+	}
 	</style>
 </head>
 <body>
@@ -187,6 +191,10 @@
                 elImg.attr('src', src).on('load', function () {
                     $(this).removeAttr('data-src');
                 });
+
+                if (elImg.is('video')) {
+                	elImg.removeAttr('data-src');
+                }
             }
 		});
 	});
