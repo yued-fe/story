@@ -7,7 +7,7 @@
 
 <img src="http://qidian.qpic.cn/qidian_common/349573/7a8f3c2fcac29e080df7ed82424392c7/0" width="258" height="258">
 
-日常生活可以戳这里围观：<a href="https://yued-fe.github.io/world-view/">https://yued-fe.github.io/world-view/</a>
+日常生活可以戳这里围观：<a href="https://yued-fe.github.io/story/">https://yued-fe.github.io/story/</a>
 
 ---------------
 
@@ -459,6 +459,8 @@
 <dl>
 	<dt>第1集 青云餐馆来聚餐，竟得缓动技法之真传</dt>
 	<dd>年前青云餐馆聚餐，竟然会得闻名遐迩的张小凡，不仅吃到了世界第一好吃的烤兔子，还学得张小凡火候控制的缓动技法。</dd>
+	<dt>第2集 拜访飞天蝙蝠，面授无障碍访问大法</dt>
+	<dd>今日，学院布置了一个新任务，要去佘山拜访一位名为“飞天蝙蝠”的前辈，亲自上门取一件重要的宝物。</dd>
 </dl>
 
 
