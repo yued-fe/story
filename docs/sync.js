@@ -12,7 +12,7 @@ var http = require('http');
 const build = require('./build.js');
 
 // 线上根路径和JSON文件地址
-const urlRoot = 'http://localhost/GitHub/story/upload/temp/';
+const urlRoot = 'http://story.yuewen.is26.com/temp/';
 const urlConfigJSON = urlRoot + 'config.json';
 // 本地JSON
 const pathLocalConfig = './config.json';
