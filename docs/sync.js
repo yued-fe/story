@@ -95,12 +95,17 @@ const fnSync = function (remoteData, localData) {
             return;
           }
 
-          res.setEncoding('utf8');
+          var charCode = 'utf8';
+          if (!/\.html$/.test(obj.remoteUrl)) {
+            charCode = 'binary';
+          }
+          res.setEncoding(charCode);
+
           let rawData = '';
           res.on('data', (chunk) => { rawData += chunk; });
           res.on('end', () => {
             //本地写入
-            fs.writeFile(obj.localPath, rawData, (err) => {
+            fs.writeFile(obj.localPath, rawData, charCode, (err) => {
               if (err) throw err;
               start++;
               step();
