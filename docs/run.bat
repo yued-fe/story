@@ -1,1 +1,1 @@
-node build
+node run

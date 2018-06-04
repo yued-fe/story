@@ -8,7 +8,7 @@ stat = fs.stat;
      至于文章菜单显示的文字，取自.html页面的文件名
 */
 
-(function () {
+module.exports = (function () {
 	return {
 		// 纯数字年月转换成中文
 		// 如：201702 → 2017年2月
@@ -103,7 +103,7 @@ stat = fs.stat;
 </head>\
 <body>$1</body>\
 </html>';
-			
+
 			var htmlBody = '<h1>'+ yearMonth +'学院日常</h1>';
 			// 主体内容
 			fs.readdir(folderName, function (err, files) {
@@ -169,7 +169,7 @@ stat = fs.stat;
 			    if (err) {
 			        throw err;
 			    }
-			   	
+
 			    // index.html页面左侧菜单数据生成
 			    self.createMenuJSON(files);
 
@@ -185,4 +185,4 @@ stat = fs.stat;
 			this.readFile();
 		}
 	}
-})().init();
+})();
