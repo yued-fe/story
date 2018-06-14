@@ -81,7 +81,7 @@ module.exports = (function () {
 					// 月份直接
 					json.daily.unshift({
 						menu: self.yearMonthConvert(folderName),
-						url: './'+ folderName +'/?r=' + new Date().getTime()
+						url: './'+ folderName +'/'
 					});
 				}
 			});

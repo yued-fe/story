@@ -7,12 +7,12 @@ stat = fs.stat;
 var path = require('path');
 var url = require('url');
 
-var http = require('http');
+var https = require('https');
 
 const build = require('./build.js');
 
 // 线上根路径和JSON文件地址
-const urlRoot = 'http://story.yuewen.is26.com/temp/';
+const urlRoot = 'https://uploader.story.yueio.net/temp/';
 const urlConfigJSON = urlRoot + 'config.json';
 // 本地JSON
 const pathLocalConfig = './config.json';
@@ -80,7 +80,7 @@ const fnSync = function (remoteData, localData) {
             return;
         }
         console.log('正在同步资源' + obj.remoteUrl);
-        http.get(obj.remoteUrl, (res) => {
+        https.get(obj.remoteUrl, (res) => {
           const { statusCode } = res;
 
           let error;
@@ -119,7 +119,7 @@ const fnSync = function (remoteData, localData) {
 };
 
 console.log('拉取线上config.json...');
-http.get(urlConfigJSON, (res) => {
+https.get(urlConfigJSON, (res) => {
   const { statusCode } = res;
 
   let error;
