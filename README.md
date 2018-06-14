@@ -5,9 +5,11 @@
 
 《阅之国战记》讲述的就是“阅之国”慢慢成长的事故。而《阅之国“哇牛叉”学院故事》是《阅之国战记》的番外篇，讲述“阅之国”在竞争激烈的东之大陆成长和崛起过程中“哇牛叉”学院发生的有趣的或惊险的或功勋卓越的故事，故事将于互联22元年1月1日开始连载，喜欢的小伙伴一定不要错过，关注“哇牛叉”学院的故事坊，随时掌握“哇牛叉”学院第一手故事更新。
 
-<img src="http://qidian.qpic.cn/qidian_common/349573/7a8f3c2fcac29e080df7ed82424392c7/0" width="258" height="258">
+<img src="https://qidian.qpic.cn/qidian_common/349573/7a8f3c2fcac29e080df7ed82424392c7/0" width="258" height="258">
 
 日常生活可以戳这里围观：<a href="https://yued-fe.github.io/story/">https://yued-fe.github.io/story/</a>
+
+<img src="https://qidian.qpic.cn/qidian_common/349573/baf7263b4261440b07fd6957f4af30d8/0" width="258" height="258">
 
 ---------------
 

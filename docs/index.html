@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title>阅之国“哇牛叉”学院日常</title>
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="https://qidian.gtimg.com/lulu/theme/modern/css/common/ui.css">
@@ -42,17 +43,79 @@
 	article p > img {
 		margin: 0 0 5px 0;
 	}
+    :root .main > aside {
+        display: block;
+    }
+    @media screen and (max-width: 480px) {
+        .main aside {
+            width: auto;
+            position: absolute;
+            left: 0; right: 0; top: 62px;
+            padding-bottom: 0; margin-bottom: 0;
+            box-shadow: 0 999px 0 999px #fff;
+        }
+        .aside_dl {
+            columns: 2;
+        }
+        :root .main > aside {
+            display: none;
+        }
+        .header_icon_menu {
+            position: absolute;
+            right: 10px; top: 20px;
+            width: 30px; height: 3px;
+            padding: 6px 0;
+            border-top: 3px solid;
+            border-bottom: 3px solid;
+            background-color: currentColor;
+            background-clip: content-box;
+            color: #fff;
+        }
+        .header_icon_menu:hover {
+            color: #fff;
+        }
+        .header_icon_menu.active {
+            color: transparent;
+        }
+        .header_icon_menu.active::before,
+        .header_icon_menu.active::after {
+            content: '';
+            border-top: 3px solid #fff;
+            width: inherit;
+            position: absolute;
+            top: 50%; margin-top: -2px;
+            transform: rotate(45deg);
+        }
+        .header_icon_menu.active::after {
+            transform: rotate(-45deg);
+        }
+
+        article {
+            margin: 16px;
+        }
+        article p > img,
+        article p > video,
+        article iframe {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        article iframe[src*="v.qq"] {
+            height: calc(0.5656 * (100vw  - 32px));
+        }
+    }
 	</style>
 </head>
 <body>
 
 <header>
 	<a href="./" class="header_l"><h1 class="logo">阅文集团</h1></a>
+    <a href="javascript:" id="headerMenu" class="header_icon_menu"></a>
 </header>
 <div class="main">
 	<!-- 侧边栏 -->
     <!-- 侧边栏 -->
-    <aside id="aside" style="display: block; visibility: hidden;"></aside>    
+    <aside id="aside"></aside>
     <!-- 主内容 -->
     <section>
     	<article id="article">
@@ -64,7 +127,7 @@
 <a href="#" id="backtop" class="backtop">返回顶部</a>
 
 <script id="tplMenu" type="text/html">
-	<i class="aside_bg"></i>        
+	<i class="aside_bg"></i>
     <div class="aside_main">
         <dl class="aside_dl">
             <dt class="aside_dt">春花秋月流水志</dt>
@@ -111,6 +174,11 @@
 			elImages = elArticle.find('[data-src]');
 
 			$(win).trigger('scroll');
+
+            if (elHeaderMenu.width()) {
+                elHeaderMenu.removeClass('active');
+                elAside.hide();
+            }
 		};
 
 		if (cache[url]) {
@@ -139,7 +207,6 @@
 			});
 		}
 	});
-
 
 	// 左侧导航数据请求
 	$.getJSON('./menu.json', function (json) {
@@ -175,7 +242,7 @@
 
 		elImages.each(function () {
 			var elImg = $(this);
- 
+
             // 图片等一些数据
             var offsetImg = elImg.offset();
 
@@ -202,6 +269,21 @@
 		event.preventDefault();
 		$(win).scrollTop(0);
 	});
+
+    $(window).on('resize', function () {
+        $(this).trigger('scroll');
+
+        if (!elHeaderMenu.width()) {
+            elHeaderMenu.removeClass('active');
+            elAside.css('display', '');
+        }
+    });
+
+    // 移动端导航切换
+    var elHeaderMenu = $('#headerMenu').on('click', function () {
+        $(this).toggleClass('active');
+        elAside.toggle();
+    });
 })(window);
 </script>
 </body>
