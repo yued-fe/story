@@ -210,6 +210,15 @@
 			<img src="https://qidian.qpic.cn/qidian_common/349573/ec7be123731294148b8b8b5196096775/0" width="60" height="60">
 		</td>
 	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="yangjian">杨建</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/e70c55b0407cc5a42095c6d6eb0e06ed/0" width="60" height="60">
+		</td>
+	</tr>
 </table>
 
 
@@ -291,15 +300,6 @@
 	</tr>
 	<tr>
 		<td width="240">
-			<h4>宇之心</h4>
-			<p>技能：宇宙和平。</p>
-		</td>
-		<td width="120" align="center">
-			<img src="https://qidian.qpic.cn/qidian_common/349573/6621b8603ce7f74dd0de9bd046c8e816/0" width="60" height="60">
-		</td>
-	</tr>
-	<tr>
-		<td width="240">
 			<h4 name="zhongweitao">瑞恩</h4>
 			<p>技能：预见未来。</p>
 		</td>
@@ -319,29 +319,11 @@
 	</tr>
 	<tr>
 		<td width="240">
-			<h4>矢恒</h4>
-			<p>技能：聚气。</p>
-		</td>
-		<td width="120" align="center">
-			<img src="https://qidian.qpic.cn/qidian_common/349573/6621b8603ce7f74dd0de9bd046c8e816/0" width="60" height="60">
-		</td>
-	</tr>
-	<tr>
-		<td width="240">
-			<h4>萤火</h4>
-			<p>技能：黄绿色激光。</p>
-		</td>
-		<td width="120" align="center">
-			<img src="https://qidian.qpic.cn/qidian_common/349573/6621b8603ce7f74dd0de9bd046c8e816/0" width="60" height="60">
-		</td>
-	</tr>
-	<tr>
-		<td width="240">
-			<h4>马路口</h4>
+			<h4 name="chenxiaojing">马路口</h4>
 			<p>技能：瞬间记忆。</p>
 		</td>
 		<td width="120" align="center">
-			<img src="https://qidian.qpic.cn/qidian_common/349573/6621b8603ce7f74dd0de9bd046c8e816/0" width="60" height="60">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/06d1585d05340e64b0bb5ebc7cce841f/0" width="60" height="60">
 		</td>
 	</tr>
 	<tr>
@@ -380,6 +362,60 @@
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/72d76ad8059b6662ea201e84b8faecfa/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="cuiyanbin">宾宾</h4>
+			<p>技能：豪饮。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/8063afc9ccc658bce7b6d50cb70528b6/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="gongjian">戬戬</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/32f9d0aca70cf2398fa91094da0bebe6/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="guosicong">聪聪</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/35f3bc9fb6915f94c7a666ac0abcb6bb/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="guoyanwen">雯雯</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/46cbd37736ff2115e72f2d95ab52a18c/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="guosicong">阳阳·男</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/9376305114fa56e320922e082fbb6619/0" width="60" height="60">
+		</td>
+	</tr>
+	<tr>
+		<td width="240">
+			<h4 name="guosicong">阳阳·女</h4>
+			<p>技能：不详。</p>
+		</td>
+		<td width="120" align="center">
+			<img src="https://qidian.qpic.cn/qidian_common/349573/cb799b7c2dc906443ea58758a5199e61/0" width="60" height="60">
 		</td>
 	</tr>
 </table>
