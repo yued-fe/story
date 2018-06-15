@@ -4,7 +4,9 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 	<title>阅之国“哇牛叉”学院日常</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="keywords" content="阅文集团,YUX,体验设计部,阅文前端,阅文设计,前端开发,团队建设,学院日常">
+    <meta name="description" content="阅文集团YUX体验设计部精彩生活，精彩日常，团队成员风采展示。欢迎加入阅文集团YUX体验设计部。">
+	<link rel="shortcut icon" href="https://yued-fe.github.io/story/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" href="https://qidian.gtimg.com/lulu/theme/modern/css/common/ui.css">
 	<link rel="stylesheet" href="https://qidian.gtimg.com/lulu/theme/modern/css/common/common.css">
 	<style>
@@ -104,6 +106,34 @@
             height: calc(0.5656 * (100vw  - 32px));
         }
     }
+    @media screen and (min-width: 480px) {
+        .aside_dt {
+            transition: color .2s;
+            cursor: pointer;
+        }
+        .aside_dt:hover {
+            color: #666;
+        }
+        .aside_dt:after {
+            content: '';
+            position: absolute;
+            border: 5px solid transparent;
+            border-top-color: currentColor;
+            margin: 10px 0 0 8px;
+            transform: rotate(-90deg);
+        }
+        .aside_dt[open]:after {
+            transform: rotate(0);
+            margin-top: 13px;
+            margin-left: 5px;
+        }
+        .aside_dd {
+            display: none;
+        }
+        .aside_dt[open] ~ .aside_dd {
+            display: block;
+        }
+    }
 	</style>
 </head>
 <body>
@@ -129,18 +159,17 @@
 <script id="tplMenu" type="text/html">
 	<i class="aside_bg"></i>
     <div class="aside_main">
+        {{each data as objData}}
         <dl class="aside_dl">
-            <dt class="aside_dt">春花秋月流水志</dt>
-            {{each daily as obj}}
-            <dd><a href="{{obj.url}}" class="aside_nav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
-        	{{/each}}
+            <dt id="Y{{objData.year}}" class="aside_dt jsBar">{{objData.title}}</dt>
+            {{each objData.data as obj}}
+            <dd class="aside_dd"><a href="{{obj.url}}" class="aside_nav jsNav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
+            {{/each}}
         </dl>
+        {{/each}}
         <div class="aside_divide"></div>
         <dl class="aside_dl">
-        	<dt class="aside_dt">夏裘冬葛小故事</dt>
-        	{{each article as obj}}
-            <dd><a href="{{obj.url}}" class="aside_nav"><i class="icon icon_nav_menu"></i>{{obj.menu}}</a><i class="icon-loading"></i></dd>
-        	{{/each}}
+            <dd><a href="https://github.com/yued-fe/story" class="aside_nav" target="_blank"><i class="icon icon_nav_menu"></i>关于团队</a></dd>
         </dl>
     </div>
 </script>
@@ -157,7 +186,7 @@
 	// 图片滚动加载
 	var elImages = elArticle.find('[data-src]');
 
-	elAside.delegate('a', 'click', function (event) {
+	elAside.delegate('.jsNav', 'click', function (event) {
 		event.preventDefault();
 
 		var elNav = $(this);
@@ -208,11 +237,81 @@
 		}
 	});
 
+    elAside.delegate('.jsBar', 'click', function () {
+        var attrOpen = $(this).attr('open');
+        if (typeof attrOpen == 'string') {
+            $(this).removeAttr('open');
+        } else {
+            $(this).attr('open', '');
+        }
+    });
+
+
 	// 左侧导航数据请求
 	$.getJSON('./menu.json', function (json) {
-		$('#aside').html(template("tplMenu", json)).css({
-			visibility: 'visible'
-		}).find('a').eq(0).trigger('click');
+        var daily = json.daily;
+        // 根据年份重新分组
+        // 否则太高，不好操作
+        var objMatch = {
+            '2017': '丁酉',
+            '2018': '戊戌',
+            '2019': '己亥',
+            '2020': '庚子',
+            '2021': '辛丑',
+            '2022': '壬寅',
+            '2023': '癸卯',
+            '2024': '甲辰',
+            '2025': '乙巳',
+            '2026': '丙午',
+            '2027': '丁未'
+        };
+
+        var arrData = [];
+        daily.forEach(function (obj) {
+            var year = obj.menu.split('年')[0];
+            // 是否当前年份已经有了
+            var isYearExist = false;
+            arrData.forEach(function (data) {
+                if (data.year == year) {
+                    data.data.push(obj);
+                    isYearExist = true;
+                }
+            });
+
+            if (isYearExist == false) {
+                arrData.push({
+                    year: year,
+                    title: year + objMatch[year] + '年',
+                    data: [obj]
+                });
+            }
+        });
+
+		elAside.html(template("tplMenu", {
+            data: arrData
+        }));
+
+        var elNavs = elAside.find('.jsNav');
+
+        // 展开与收起
+        var matchIndex = 0;
+        var hash = location.hash;
+        if (hash) {
+            // 匹配的a
+            elNavs.each(function (index) {
+                if (hash == this.getAttribute('href').replace(/\D/g, '')) {
+                    matchIndex = index;
+                    return false;
+                }
+            });
+        }
+
+        // 拉取对应月份日常
+        elNavs.eq(matchIndex).trigger('click').parents('dl').find('dt').attr('open', '');
+        // 显示侧边栏
+        elAside.css({
+            visibility: 'visible'
+        });
 	});
 
 	// 索引定位
@@ -238,7 +337,6 @@
 
 		// 图片滚动加载
 		var winHeight = $(win).height();
-
 
 		elImages.each(function () {
 			var elImg = $(this);
