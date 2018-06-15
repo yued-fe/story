@@ -15,7 +15,7 @@
 ### 院长
 <table width="100%" style="display: table;">
     <tr>
-		<td>
+		<td width="240">
 			<h4>软大</h4>
 			<p>院长。</p>
 			<p>技能：帅气。</p>
@@ -29,7 +29,7 @@
 ### 前端公社
 <table width="100%" style="display: table;">
 	<tr>
-		<td>
+		<td width="240">
 			<h4>神官</h4>
 			<p>技能：K神。</p>
 		</td>
@@ -38,7 +38,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="yangfan">波波</h4>
 			<p>单身中。</p>
 			<p>技能：人品加护。</p>
@@ -48,7 +48,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="nikun">阿文</h4>
 			<p>尚膳正管理大臣。</p>
 			<p>技能：约饭。</p>
@@ -58,7 +58,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>小爷</h4>
 			<p>技能：投资。</p>
 		</td>
@@ -67,7 +67,7 @@
 		</td>
 	</tr>
 		<tr>
-		<td>
+		<td width="240">
 			<h4>罗三石</h4>
 			<p>爬墙术满级，耳目遍布四海，收集九州八卦。</p>
 			<p>技能：晒妻。</p>
@@ -77,7 +77,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>张小师</h4>
 			<p>喜甜食。</p>
 			<p>技能：捕鱼。</p>
@@ -87,7 +87,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhangyunling">牧</h4>
 			<p>爱好：吃喝</p>
 			<p>技能：跑步。</p>
@@ -97,7 +97,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>阿坤</h4>
 			<p>强迫症重度患者。</p>
 			<p>技能：卡丁车。</p>
@@ -107,7 +107,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhengchengzhong">东方姑娘</h4>
 			<p>下山寻爱的男子。</p>
 			<p>技能：舞技。</p>
@@ -117,7 +117,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="renjiale">莫朵乐</h4>
 			<p>来自西域。</p>
 			<p>技能：普勒耶尔森林之歌。</p>
@@ -127,7 +127,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhaojun">朝朝</h4>
 			<p>神游少女</p>
 			<p>技能：浮想联翩。</p>
@@ -137,7 +137,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhouwenkang">纳扎</h4>
 			<p>时间旅行者，有洁癖</p>
 			<p>技能：美食、跑步。</p>
@@ -147,7 +147,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="xueenze">变色龙</h4>
 			<p>技能：隐身。</p>
 		</td>
@@ -156,7 +156,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="chengmingyu">马头</h4>
 			<p>技能：时空传送门。</p>
 		</td>
@@ -165,7 +165,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="liupeng">飞飞</h4>
 			<p>技能：不详。</p>
 		</td>
@@ -174,7 +174,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="yanmeng">蒙蒙</h4>
 			<p>技能：不详。</p>
 		</td>
@@ -183,7 +183,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhangzhuo">卓卓</h4>
 			<p>技能：不详。</p>
 		</td>
@@ -192,7 +192,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="yangxinxin">芯芯</h4>
 			<p>技能：不详。</p>
 		</td>
@@ -206,7 +206,7 @@
 ### 设计公社
 <table width="100%">
 	<tr>
-		<td>
+		<td width="240">
 			<h4>小鹿</h4>
 			<p>幕后军师。</p>
 			<p>技能：极尽攻略。</p>
@@ -216,7 +216,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>小猪</h4>
 			<p>技能：无尽梦魇。</p>
 		</td>
@@ -225,7 +225,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>菠萝</h4>
 			<p>技能：灵魂脱壳。</p>
 		</td>
@@ -234,7 +234,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>馒头</h4>
 			<p>背景神秘，来自世界边缘的男人。</p>
 			<p>技能：暴食。</p>
@@ -244,7 +244,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>斯诺</h4>
 			<p>技能：暴击与加成。</p>
 		</td>
@@ -253,7 +253,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>米亚</h4>
 			<p>技能：读心术。</p>
 		</td>
@@ -262,7 +262,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>起床气</h4>
 			<p>技能：明察秋毫。</p>
 		</td>
@@ -271,7 +271,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>康康兔</h4>
 			<p>技能：神笔马良。</p>
 		</td>
@@ -280,7 +280,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>宇之心</h4>
 			<p>技能：宇宙和平。</p>
 		</td>
@@ -289,7 +289,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>瑞恩</h4>
 			<p>技能：预见未来。</p>
 		</td>
@@ -298,7 +298,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>5号</h4>
 			<p>爱好：游戏</p>
 			<p>技能：把妹。</p>
@@ -308,7 +308,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>矢恒</h4>
 			<p>技能：聚气。</p>
 		</td>
@@ -317,7 +317,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>萤火</h4>
 			<p>技能：黄绿色激光。</p>
 		</td>
@@ -326,7 +326,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4>马路口</h4>
 			<p>技能：瞬间记忆。</p>
 		</td>
@@ -335,7 +335,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="zhoubeibei">卡门的画姬</h4>
 			<p>技能：大眼萌。</p>
 		</td>
@@ -344,7 +344,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="wangjianhua">彼得潘</h4>
 			<p>技能：小飞侠。</p>
 		</td>
@@ -353,7 +353,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="huangyue">涵半仙</h4>
 			<p>技能：仙游术。</p>
 		</td>
@@ -362,7 +362,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="hanyanyan">奥利奥</h4>
 			<p>技能：拷贝组合。</p>
 		</td>
@@ -371,7 +371,7 @@
 		</td>
 	</tr>
 	<tr>
-		<td>
+		<td width="240">
 			<h4 name="yulu">莱恩</h4>
 			<p>技能：心灵感应。</p>
 		</td>
