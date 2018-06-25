@@ -202,9 +202,8 @@
 	</tr>
 	<tr>
 		<td width="240">
-			<h4 name="yangxinxin">玮玮</h4>
-			<p>蔡徐坤粉。</p>
-			<p>技能：阅读达人。</p>
+			<h4 name="yangxinxin">白泽</h4>
+			<p>技能：ikun。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/ec7be123731294148b8b8b5196096775/0" width="60" height="60">
@@ -212,7 +211,7 @@
 	</tr>
 	<tr>
 		<td width="240">
-			<h4 name="yangjian">杨建</h4>
+			<h4 name="yangjian">建建</h4>
 			<p>技能：不详。</p>
 		</td>
 		<td width="120" align="center">
