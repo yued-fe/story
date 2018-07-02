@@ -163,7 +163,7 @@
         <dl class="aside_dl">
             <dt id="Y{{objData.year}}" class="aside_dt jsBar">{{objData.title}}</dt>
             {{each objData.data as obj}}
-            <dd class="aside_dd"><a href="{{obj.url}}" class="aside_nav jsNav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
+            <dd class="aside_dd"><a href="{{obj.url}}" id="{{obj.url.replace(/\D/g, '')}}" class="aside_nav jsNav"><i class="icon icon_nav_msg"></i>{{obj.menu}}<i class="icon-loading"></i></a></dd>
             {{/each}}
         </dl>
         {{/each}}
@@ -199,15 +199,17 @@
 		var callback = function () {
 			elAside.find('.' + ACTIVE).removeClass(ACTIVE);
 			elNav.addClass(ACTIVE);
-
+            // 滚动加载对象改变
 			elImages = elArticle.find('[data-src]');
-
+            // 触发加载
 			$(win).trigger('scroll');
-
+            // 移动端
             if (elHeaderMenu.width()) {
                 elHeaderMenu.removeClass('active');
                 elAside.hide();
             }
+            // 浏览器hash变化
+            location.hash = '#&' + elNav.attr('id');
 		};
 
 		if (cache[url]) {
@@ -295,7 +297,7 @@
 
         // 展开与收起
         var matchIndex = 0;
-        var hash = location.hash;
+        var hash = location.hash.replace(/\D/g, '');
         if (hash) {
             // 匹配的a
             elNavs.each(function (index) {
