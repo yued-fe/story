@@ -45,6 +45,7 @@
         margin: 20px 30px 20px;
     }
     hr {border: 0; border-top: 1px solid rgba(0,0,0,.1);}
+    .vh, .vh ~ .beian{visibility: hidden;}
 	article p > img {
 		margin: 0 0 5px 0;
 	}
@@ -157,7 +158,7 @@
     	<article id="article">
     		<div class="ui-loading" style="height:400px;"><span class="ui-loading-icon"></span></div>
     	</article>
-        <hr>
+        <hr class="vh">
         <p class="beian"><a href="http://www.miitbeian.gov.cn" class="gray">沪ICP备14016804号-4</a></p>
 	</section>
 </div>
@@ -218,6 +219,8 @@
             }
             // 浏览器hash变化
             location.hash = '#&' + elNav.attr('id');
+            // 备案信息显示
+            $('hr').removeClass('vh');
 		};
 
 		if (cache[url]) {
