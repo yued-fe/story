@@ -60,6 +60,16 @@ const fnSync = function (remoteData, localData) {
                 localPath: path.join(yearMonth, filenameHTML)
             });
         }
+
+        // 如果年月文件夹不存在，创建之
+        let pathImageYearMonth = path.join('./images', yearMonth);
+        let pathYearMonth = path.join('./', yearMonth);
+        if (!fs.existsSync(pathYearMonth)) {
+          fs.mkdirSync(pathYearMonth);
+        }
+        if (!fs.existsSync(pathImageYearMonth)) {
+          fs.mkdirSync(pathImageYearMonth);
+        }
     }
 
     // 开始对比对出来需要更新的资源进行拉取
