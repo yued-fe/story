@@ -167,7 +167,7 @@
 	<tr>
 		<td width="240">
 			<h4 name="liupeng">飞飞</h4>
-			<p>技能：不详。</p>
+			<p>技能：爱女加护。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/b577e7d94ec56af19f0df990788e0834/0" width="60" height="60">
@@ -176,7 +176,7 @@
 	<tr>
 		<td width="240">
 			<h4 name="yanmeng">蒙蒙</h4>
-			<p>技能：不详。</p>
+			<p>技能：格斗。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/068383b90f8535e7cabbfd45c8c52323/0" width="60" height="60">
@@ -185,7 +185,7 @@
 	<tr>
 		<td width="240">
 			<h4 name="zhangzhuo">卓卓</h4>
-			<p>技能：不详。</p>
+			<p>技能：可以不吃东西。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/6621b8603ce7f74dd0de9bd046c8e816/0" width="60" height="60">
@@ -194,7 +194,7 @@
 	<tr>
 		<td width="240">
 			<h4 name="yangxinxin">芯芯</h4>
-			<p>技能：不详。</p>
+			<p>技能：永葆青春。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/80558ba6bfe5f0337921ca07947df4bc/0" width="60" height="60">
@@ -212,7 +212,7 @@
 	<tr>
 		<td width="240">
 			<h4 name="yangjian">建建</h4>
-			<p>技能：不详。</p>
+			<p>技能：平板支撑。</p>
 		</td>
 		<td width="120" align="center">
 			<img src="https://qidian.qpic.cn/qidian_common/349573/e70c55b0407cc5a42095c6d6eb0e06ed/0" width="60" height="60">
