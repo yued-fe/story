@@ -3,7 +3,7 @@
 
 在东之大陆，有一个名为阅文的国家，人称“阅之国”，阅之国里面有个名为YUX的学院，学院内总时不时发生一些或日常的，或有趣的，或惊险故事。
 
-这些故事都被记录到了这里：<a href="https://story.yueio.net/">https://story.yueio.net/</a>
+这些故事都被记录到了这里：<a href="https://story.tux.team/">https://story.yux.team/</a>
 
 <img src="https://qidian.qpic.cn/qidian_common/349573/12d8fd449485fae06ce1b5ae7cf25a40/0" width="258" height="258">
 
