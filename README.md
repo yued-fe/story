@@ -5,7 +5,7 @@
 
 这些故事都被记录到了这里：<a href="https://story.tux.team/">https://story.yux.team/</a>
 
-<img src="https://qidian.qpic.cn/qidian_common/349573/12d8fd449485fae06ce1b5ae7cf25a40/0" width="258" height="258">
+<img src="https://qidian.qpic.cn/qidian_common/349573/98fb7a51f21bdb52db409ef3b01d2ff2/0" width="150" height="150">
 
 --------------------
 
